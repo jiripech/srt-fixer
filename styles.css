@@ -1,0 +1,16 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#111;background:#f2f8ff}
+body{max-width:1024px;margin:0 auto;padding:1rem;}
+header{margin-bottom:1rem;}
+header h1{font-size:1.5rem;color:#0f4e8a;}
+.controls,.toolbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.6rem;margin:.6rem 0;}
+.controls label{display:flex;flex-direction:column;gap:.4rem;font-weight:600;}
+button{background:#1976d2;color:#fff;border:0;border-radius:.35rem;padding:.55rem .85rem;cursor:pointer;transition:.22s;}
+button:hover{background:#145ea8;}
+.editor{margin-top:1rem;display:grid;gap:.5rem;}
+.entry{border:1px solid #b7d0ee;border-radius:.5rem;background:#fff;padding:.65rem;}
+.entry textarea{width:100%;min-height:3rem;border:1px solid #bcd9f8;border-radius:.35rem;padding:.45rem;resize:vertical;}
+.entry .meta{display:flex;justify-content:space-between;font-size:.83rem;color:#555;}
+.entry.modified{border-color:#13a14a;background:#eaf7ed;}
+.info{margin-top:1.5rem;padding:.8rem;border:1px solid #b6d1ed;border-radius:.5rem;background:#fff;}
+#speechStatus{font-weight:600;margin-left:.5rem;color:#1976d2;}

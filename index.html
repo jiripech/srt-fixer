@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#1976d2" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>SRT Fix PWA</title>
+</head>
+<body>
+  <header>
+    <h1>SRT Fix PWA</h1>
+    <p>Načti .srt, upravuj, diktuj, exportuj. Offline-ready.</p>
+  </header>
+
+  <section class="controls">
+    <label>
+      Načti překlad (SRT):
+      <input id="fileInput" type="file" accept=".srt" />
+    </label>
+    <button id="loadHistory">Načíst historii oprav</button>
+    <button id="clearHistory">Smazat historii</button>
+  </section>
+
+  <section class="toolbar">
+    <button id="applyCorrections">Aplikovat opravy</button>
+    <button id="exportSRT">Exportovat SRT</button>
+    <button id="savePatched">Uložit opravy</button>
+    <button id="speechToggle">Spustit diktát</button>
+    <span id="speechStatus"></span>
+  </section>
+
+  <section class="editor" id="editor"></section>
+
+  <section class="info">
+    <h2>Postup</h2>
+    <ol>
+      <li>Načti původní soubor .srt.</li>
+      <li>Uprav text v poli; každá změna se automaticky ukládá do lokální historie.</li>
+      <li>Použij tlačítko „Aplikovat opravy“, poté „Exportovat SRT“.</li>
+      <li>Diktuj: klikni na mikrofon a mluv; přepis se vloží do aktivního řádku.</li>
+    </ol>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

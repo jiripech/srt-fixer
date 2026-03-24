@@ -1,0 +1,25 @@
+{
+  "name": "srt-fixer",
+  "version": "1.0.0",
+  "description": "A simple Progressive Web App for fixing translated SRT files with:",
+  "main": "app.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiripech/srt-fixer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jiripech/srt-fixer/issues"
+  },
+  "homepage": "https://github.com/jiripech/srt-fixer#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "http-server": "^14.1.1"
+  }
+}

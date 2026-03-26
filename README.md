@@ -10,7 +10,7 @@ A simple Progressive Web App for fixing translated SRT files with:
 
 ## Usage
 
-1. Open `index.html` in a browser.
+1. Open [SRT Fixer](https://srtfx.hq.cz "SRT Fixer App") in a browser.
 2. Load a `*.srt` file.
 3. Edit the text; changes are saved automatically to history.
 4. Click `Apply Corrections` or `Save Corrections`.
@@ -29,15 +29,14 @@ A simple Progressive Web App for fixing translated SRT files with:
 
 ## Plan for 2026
 
-- import/export JSON correction history
-- add tests
-- add multi-language support
-- improve exact timing and blank line handling
+- [import/export JSON correction history](https://github.com/jiripech/srt-fixer/issues/1 "Github Issue #1")
+- [add tests](https://github.com/jiripech/srt-fixer/pull/2 "Github Copilot Pull request #2")
+- [add multi-language support](https://github.com/jiripech/srt-fixer/issues/2 "Github Issue #3")
 
 ## How to run
 
-1. Open the `srt-fix-pwa` directory.
-2. In a browser, load `index.html`.
+1. Clone this repository to your local storage [in way you prefer](https://docs.github.com/en/get-started/git-basics/about-remote-repositories#cloning-with-ssh-urls "Github Docs: Cloning with SSH URLs").
+2. In a browser, open `index.html`.
 3. Upload your source translation (`*.srt`).
 4. Edit text lines; all changes are stored to local history.
 5. Click `Apply Corrections` to reload from history, then `Export SRT`.

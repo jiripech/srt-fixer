@@ -41,3 +41,37 @@ A simple Progressive Web App for fixing translated SRT files with:
 4. Edit text lines; all changes are stored to local history.
 5. Click `Apply Corrections` to reload from history, then `Export SRT`.
 6. `Save Corrections` in localStorage keeps changes after reload.
+
+## Timestamp alignment script
+
+Use `align_srt_timestamps.py` when you have:
+
+- an original SRT with correct timestamps
+- a translated SRT with incorrect timestamps
+
+The script keeps timestamps from the original file and maps translated text onto them,
+including basic split/merge handling between neighboring subtitle blocks.
+
+Example:
+
+```bash
+python3 align_srt_timestamps.py original.srt translated.srt output.srt
+```
+
+Dry-run consistency check (no output file is written):
+
+```bash
+python3 align_srt_timestamps.py original.srt translated.srt --dry-run
+```
+
+Useful options:
+
+- `--overwrite` overwrite existing output file
+- `--max-group 4` allow larger split/merge groups
+- `--group-penalty 0.25` tune how strongly split/merge mismatch is penalized during alignment
+- `--renumber` rewrite subtitle numbering to `1..N`
+- `--dry-run` print suspicious segments (possible shifts or missing translation parts)
+- `--strict` return non-zero exit code if suspicious segments are detected
+- `--ignore-sdh` keep original SDH cue lines (`(...)` or `[...]`) in the output
+
+When the original seems SDH-heavy and translation is not, the script prints a hint to rerun with `--ignore-sdh`.

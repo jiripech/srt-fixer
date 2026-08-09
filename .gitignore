@@ -2,6 +2,7 @@
 
 # dependencies
 node_modules/
+__pycache__
 .pnp/
 .pnp.*
 .yarn/*
@@ -14,6 +15,7 @@ node_modules/
 coverage/
 log/
 test-results/
+tests/__pycache__/
 playwright-report/
 blob-report/
 playwright/.cache/

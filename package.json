@@ -4,7 +4,11 @@
   "description": "A simple Progressive Web App for fixing translated SRT files with:",
   "main": "app.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "npm run test:e2e",
+    "test:e2e": "playwright test",
+    "test:py": "python3 -m unittest tests/test_align_srt_timestamps.py",
+    "lint:md": "markdownlint-cli2 README.md",
+    "check": "npm run lint:md && npm run test:py && npm run test:e2e"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,7 @@
   },
   "homepage": "https://github.com/jiripech/srt-fixer#readme",
   "devDependencies": {
-    "@playwright/test": "^1.58.2",
-    "http-server": "^14.1.1"
+    "@playwright/test": "1.61.0",
+    "markdownlint-cli2": "0.23.2"
   }
 }
